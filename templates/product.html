@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Trend Over Time</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background: url('/static/images/product_bg.jpg') no-repeat center center fixed; /* Added: Background image */
+            background-size: cover; /* Added: Ensure the image covers the whole page */
+            color: #333;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-top: 20px;
+            color: #0d1318;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin: 20px 0;
+            color: #0d1318;
+        }
+
+        button {
+            font-size: 1.2em;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        div {
+            background: rgba(255, 255, 255, 0.8); /* Added: White overlay for readability */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            width: 90%;
+            max-width: 800px;
+        }
+        p {
+            font-size: 1.5em; /* Added: Increased font size for paragraphs */
+            color: #333;
+        }
+
+        footer {
+            margin-top: 50px;
+            font-size: 1em;
+            color: #888;
+            background: #2c3e50;
+            color: #fff;
+            padding: 10px 0;
+        }
+    </style>
+    <script>
+        function loadGraph() {
+            const img = document.getElementById('graph');
+            img.src = '/plot.png';
+        }
+    </script>
+</head>
+<body>
+    <h1>Sentiment Trend Over Time</h1>
+    <button onclick="loadGraph()">Show Graph</button>
+    <br><br>
+    <img id="graph" src="" alt="Sentiment Graph will appear here">
+    
+    <h2>First 5 Records of Reviews</h2>
+    <div>
+        {{ first_five_records | safe }}
+    </div>
+
+    <h2>Most Popular Emotion</h2>
+    <div>
+        <p>{{ most_popular_emotion }}</p>
+    </div>
+
+    <h2>Percentage of Positive Reviews</h2>
+    <div>
+        <p>{{ positive_percentage | round(2) }}%</p>
+    </div>
+
+    <footer>
+        &copy; 2025 Sentiment Analysis Tool. All rights reserved.
+    </footer>
+</body>
+</html>
+
+

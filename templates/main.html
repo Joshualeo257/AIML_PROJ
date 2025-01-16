@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis of Product Reviews</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background: url('/static/images/main_bg.jpg') no-repeat center center fixed; 
+            background-size: cover; 
+            color: #333;
+        }
+
+        .title {
+            font-size: 2.8em;
+            margin-top: 20px;
+            color: #2c3e50;
+        }
+
+        .subheading {
+            font-size: 1.8em;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 30px auto;
+            width: 90%;
+            max-width: 1200px;
+        }
+
+        .product {
+            text-align: center;
+            background: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .product:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .product img {
+            width: 180px;
+            height: 180px;
+            border-radius: 12px;
+            transition: transform 0.3s;
+        }
+
+        .product img:hover {
+            transform: scale(1.1);
+        }
+
+        .product-name {
+            margin-top: 15px;
+            font-size: 1.3em;
+            color: #555;
+        }
+
+        footer {
+            margin-top: 50px;
+            font-size: 1em;
+            color: #888;
+            background: #2c3e50;
+            color: #fff;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">Sentiment Analysis of Product Reviews</h1>
+    <h2 class="subheading">Choose a Product:</h2>
+    <div class="products">
+        <div class="product">
+            <a href="/product?file=product1.csv">
+                <img src="/static/images/product1.jpg" alt="Product 1">
+                <div class="product-name">Product 1</div>
+            </a>
+        </div>
+        <div class="product">
+            <a href="/product?file=product2.csv">
+                <img src="/static/images/product2.jpg" alt="Product 2">
+                <div class="product-name">Product 2</div>
+            </a>
+        </div>
+        <div class="product">
+            <a href="/product?file=product3.csv">
+                <img src="/static/images/product3.png" alt="Product 3">
+                <div class="product-name">Product 3</div>
+            </a>
+        </div>
+        <div class="product">
+            <a href="/product?file=product4.csv">
+                <img src="/static/images/product4.jpg" alt="Product 4">
+                <div class="product-name">Product 4</div>
+            </a>
+        </div>
+        <div class="product">
+            <a href="/product?file=product5.csv">
+                <img src="/static/images/product5.jpg" alt="Product 5">
+                <div class="product-name">Product 5</div>
+            </a>
+        </div>
+        <div class="product">
+            <a href="/product?file=product6.csv">
+                <img src="/static/images/product6.jpg" alt="Product 6">
+                <div class="product-name">Product 6</div>
+            </a>
+        </div>
+        <div class="product">
+            <a href="/product?file=product7.csv">
+                <img src="/static/images/product7.jpg" alt="Product 6">
+                <div class="product-name">Product 7</div>
+            </a>
+        </div>
+        <div class="product">
+            <a href="/product?file=product8.csv">
+                <img src="/static/images/product8.jpg" alt="Product 6">
+                <div class="product-name">Product 8</div>
+            </a>
+        </div>
+        <div class="product">
+            <a href="/product?file=product9.csv">
+                <img src="/static/images/product9.jpg" alt="Product 6">
+                <div class="product-name">Product 9</div>
+            </a>
+        </div>
+        <div class="product">
+            <a href="/product?file=product10.csv">
+                <img src="/static/images/product10.jpg" alt="Product 6">
+                <div class="product-name">Product 10</div>
+            </a>
+        </div>
+        <div class="product">
+            <a href="/product?file=product11.csv">
+                <img src="/static/images/product11.jpg" alt="Product 6">
+                <div class="product-name">Product 11</div>
+            </a>
+        </div>
+        <div class="product">
+            <a href="/product?file=product12.csv">
+                <img src="/static/images/product12.jpg" alt="Product 6">
+                <div class="product-name">Product 12</div>
+            </a>
+        </div>
+        <div class="product">
+            <a href="/product?file=product13.csv">
+                <img src="/static/images/product13.jpg" alt="Product 6">
+                <div class="product-name">Product 13</div>
+            </a>
+        </div>
+        <div class="product">
+            <a href="/product?file=product14.csv">
+                <img src="/static/images/product14.jpg" alt="Product 6">
+                <div class="product-name">Product 14</div>
+            </a>
+        </div>
+        <div class="product">
+            <a href="/product?file=product15.csv">
+                <img src="/static/images/product15.jpg" alt="Product 6">
+                <div class="product-name">Product 15</div>
+            </a>
+        </div>
+    </div>
+    <footer>
+        &copy; 2025 Sentiment Analysis Tool. All rights reserved.
+    </footer>
+</body>
+</html>
